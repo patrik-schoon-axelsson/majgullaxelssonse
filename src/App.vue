@@ -1,30 +1,43 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div>
+    <base-navbar></base-navbar>
+    <br>
+      <router-view v-slot="{ Component }">
+      <transition 
+          enter-active-class="animate__animated animate__fadeIn" mode="out-in">
+        <component :is="Component" />
+      </transition>
+    </router-view>
   </div>
-  <router-view/>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import M from 'materialize-css';
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+export default {
+  mounted() {
+    M.AutoInit();
+  },
+  computed: {
+    userLoggedIn(){
+      return this.$store.state.user;
     }
   }
 }
+</script>
+
+<style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto+Slab:wght@400;700&display=swap');
+
+html {
+  font-size: 62.5%;
+  font-family: 'Roboto Slab', serif;
+      body {
+        font-size: 1.6rem;
+      }  
+      .z-depth-2 {
+        padding: 1rem;
+      }
+}
+
 </style>

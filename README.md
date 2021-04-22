@@ -1,19 +1,12 @@
-# majgull-firebase-final
+# Majgull Axelsson.SE
 
-## Project setup
-```
-npm install
-```
+# Preview on firebase: https://majgullaxelssonse.web.app/#/
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+A simple SPA written with googles Firebase SDK as its backend, Vue 3 and Materialize CSS. Contains basic CMS features for adding new books, administering news-items and relevant links. A work in progress.
 
-### Compiles and minifies for production
-```
-npm run build
-```
+# v0.220421
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Current known issues:
+
+- Route guard fails on full browser refresh, dropping users back to Login view.
+- Various placeholder texts to remove.
