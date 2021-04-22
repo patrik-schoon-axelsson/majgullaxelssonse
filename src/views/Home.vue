@@ -16,7 +16,7 @@
     <div class="section white">
       <div class="row">
           <h3 class="center-align">Senaste nyheter</h3> 
-        <div class="row">         
+        <div class="container">         
             <news-card v-for="item in newsArray"
             :url="item.url"
             :category="item.category"

@@ -1,12 +1,13 @@
 <template>
   <div class="row">
       <div class="jumbotron">
-        <div>
+        <div class="container">
+          <br>
           <h1 class="center-align white-text"> Majgull Axelssons böcker... </h1>
           <br>
-          <p class="center-align white-text">
+          <h4 class="center-align white-text">
             Välj en bok ovanför.
-          </p>
+          </h4>
         </div>
       </div>
   </div>
