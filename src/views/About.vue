@@ -12,8 +12,8 @@
 </template>
 
 <script>
-import AboutLinks from '../components/ui/About/AboutLinks.vue';
-import AboutMain from '../components/ui/About/AboutMain.vue';
+import AboutLinks from './AboutViews/AboutLinks.vue';
+import AboutMain from './AboutViews/AboutMain.vue';
 
 export default {
   components: {
