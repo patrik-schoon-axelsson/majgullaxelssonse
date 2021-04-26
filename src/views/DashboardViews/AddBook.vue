@@ -30,16 +30,17 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col s12 m4">    
-                        <input type="text" name="isbn" v-model="isbn" required placeholder="ISBN-nummer...">
-                        <label for="isbn">* ISBN-nummer: </label>
-                    </div>
-
-                    <div class="col s12 m4">    
+                        <div class="col s12">    
                         <input type="text" name="publisher" v-model="quote" max="500" required placeholder="Favoritcitat från boken...">
                         <label for="publisher">* Citat:  {{ quote.length }} / 500</label>
                     </div>
-                    <div class="col s12 m4">    
+                </div>
+                <div class="row">
+                    <div class="col s12 m6">    
+                        <input type="text" name="isbn" v-model="isbn" required placeholder="ISBN-nummer...">
+                        <label for="isbn">* ISBN-nummer: </label>
+                    </div>
+                    <div class="col s12 m6">    
                         <input type="number" name="yearReleased" v-model="yearReleased" required placeholder="Utgivningsår...">
                         <label for="publisher">* Utgivningsår</label>
                     </div>

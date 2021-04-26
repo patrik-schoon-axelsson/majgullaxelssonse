@@ -74,7 +74,15 @@ const routes = [
         components: {
           default: () => import('../views/Dashboard.vue'),
           toolbox: () => import('../views/DashboardViews/AddBook.vue')}
-      }]
+      },
+      {
+        path: 'add-links/',
+        name: 'add-links',
+        components: {
+          default: () => import('../views/Dashboard.vue'),
+          toolbox: () => import('../views/DashboardViews/AddAboutLink.vue')          
+        }
+    }]
     }
   ]
 
