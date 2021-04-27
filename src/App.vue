@@ -1,7 +1,6 @@
 <template>
   <div>
     <base-navbar></base-navbar>
-    <br>
       <router-view v-slot="{ Component }">
       <transition 
           enter-active-class="animate__animated animate__fadeIn" mode="out-in">
@@ -18,11 +17,6 @@ export default {
   mounted() {
     M.AutoInit();
   },
-  computed: {
-    userLoggedIn(){
-      return this.$store.state.user;
-    }
-  }
 }
 </script>
 

@@ -40,6 +40,10 @@ export default {
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,300&display=swap');
 
+.z-depth-2 {
+  background-color: #fff;
+}
+
 p {
   font-family: 'Roboto', sans-serif;
 }

@@ -7,39 +7,23 @@
       </div>
     </div>
   </div>
-  <div class="row" v-else>   
-    <div class="parallax-container">
-      <div class="parallax">
-          <img src="@/assets/parallax/bookspread-bg.jpg">
-        </div>
-      </div>
-    <div class="section white">
-      <div class="row">
-          <h3 class="center-align">Senaste nyheter</h3> 
-        <div class="container">         
-            <news-card v-for="item in newsArray"
-            :url="item.url"
-            :category="item.category"
-            :key="item.id"
-            :title="item.title"
-            :content="item.content"
-            :timeStamp="item.timeAdded"
-            :author="item.author"
-            :id="item.id"
-            @delete-item-by-id="onItemDeletion"></news-card>    
-        </div>
-      </div>
+  <section id="homeBG" v-else>
+    <h3 class="center white-text" id="display-logo">Majgull Axelsson - Författare & Föreläsare</h3>
+    <br>
+    <h6 class="center white-text">Senaste nyheter: </h6>  
+        <div class="carousel">         
+              <news-card v-for="item in newsArray"
+              :url="item.url"
+              :category="item.category"
+              :key="item.id"
+              :title="item.title"
+              :content="item.content"
+              :timeStamp="item.timeAdded"
+              :author="item.author"
+              :id="item.id"
+              @delete-item-by-id="onItemDeletion"></news-card>    
     </div>
-    <div class="parallax-container">
-      <div class="parallax">
-        <img src="@/assets/parallax/aprilhaxan-bg.jpg">
-      </div>
-    </div>
-    <div class="section white">
-        <h3 class="center">Majgull Axelsson - Författare & Föreläsare</h3>  
-        <p class="flow-text center">Lite lorem ipsum här om sidan i allmänhet, bara som ett layout-test...</p>
-    </div>
-  </div>
+</section>
 </template>
 
 <script>
@@ -66,8 +50,7 @@ export default {
       newsItem.delete().then((doc) => {
         this.newsArray = []
         news.orderBy("timeAdded", 'desc').limit(6).get().then((news) => {
-            news.forEach((doc) => {
-              
+            news.forEach((doc) => {              
               let newsItem = {
                 id: doc.id, 
                 title: doc.data().title,
@@ -93,6 +76,9 @@ export default {
     }
   },
   mounted() {
+
+    // Data Fetching
+
     this.loading = true
 
     news.orderBy("timeAdded", 'desc').get().then((news) => {
@@ -112,9 +98,48 @@ export default {
       });
       this.loading = false;
 
-    }).catch((error) => {
+    })
+    .finally(() => {
+      // Carousel initialization:
+
+      M.Carousel.init(document.querySelectorAll('.carousel'), {
+        numVisible: 6,
+        shift: 25,
+        padding: 15,
+        dist: -50
+      });
+    })
+    .catch((error) => {
       console.log(error)
     })
   }
 }
 </script>
+
+<style lang="scss" scoped>
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+.carousel {
+  height: 600px;
+  margin-bottom: 2rem;
+}
+#homeBG {
+  z-index: -9999;
+  top: 0;
+  background-attachment: fixed;
+  height: 100%;
+  width: 100%;
+  background-image: url('~@/assets/background-img/samling_bocker.jpeg');
+  background-image: url('~@/assets/background-img/samling_bocker.jpeg'), linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#display-logo {
+  margin-top: 180px;
+  font-size: 2.5rem;
+  font-family: 'Dancing Script', cursive;
+}
+h6 {
+  font-size: 1.8rem;
+}
+</style>

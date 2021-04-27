@@ -99,7 +99,7 @@ export default {
 
             book.delete().then((doc) => {
 
-            M.toast({html: `<strong> Dokument med ID ${id} har tagits bort från databasen.`});
+            M.toast({html: `<strong> Dokument med ID ${doc.id} har tagits bort från databasen.`});
 
         }).catch((error) => {
             M.toast({html: `<strong>Ett fel uppstod</strong>: ${error}`});
