@@ -8,7 +8,7 @@ import M from 'materialize-css';
 M.AutoInit();
 
 function getUser() {
-  return firebase.auth.currentUser;
+  return firebase.auth().currentUser;
 }
 
 const routes = [

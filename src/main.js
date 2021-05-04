@@ -19,10 +19,10 @@ app.component('BaseNavbar', BaseNavbar);
 app.component('BaseDeleteButton', BaseDeleteButton);
 app.component('BaseCategoryButton', BaseCategoryButton);
 
-firebase.auth().onAuthStateChanged((user) => {
+firebase.auth().onAuthStateChanged(user => {
   if (user) {
     const userStore = {
-      id: user.uid,
+      id: user.getIdToken(),
       email: user.email,
       displayName: user.displayName,
     }

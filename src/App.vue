@@ -34,4 +34,15 @@ html {
       }
 }
 
+body {
+  z-index: -9999;
+  top: 0px;
+  background-attachment: sticky;
+  height: 100%;
+  width: 100%;
+  background-image: url('~@/assets/background-img/samling_bocker.jpeg'), linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 </style>

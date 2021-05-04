@@ -1,18 +1,17 @@
 <template>
 <div v-if="!isLoading">
-  <div class="row">
+  <div class="container">
+    <div class="z-depth-2">
       <ul class="tabs">
         <book-tab-link v-for="book in bookState"
         :key="book.id"
         :title="book.title"
         :id="book.id"></book-tab-link>
       </ul>
-  </div>
-  <div>
-    <router-view name="books"></router-view>
-  </div>
-  <div class="row">
-
+    </div>
+    <div class="z-depth-2">
+      <router-view name="books"></router-view>
+   </div>
   </div>
 </div>
 <div class="container" v-else>
@@ -29,7 +28,6 @@
 import store from '@/store';
 import M from 'materialize-css';
 import firebase from 'firebase/app';
-import firebaseApp from '@/firebaseApp.js';
 import BaseBookCard from '../components/ui/base/BaseBookCard.vue';
 import BookTabLink from './BookViews/BookTabLink.vue';
 
@@ -87,6 +85,11 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+
+.z-depth-2 {
+  background-color: #fff;
+  position: 50%;
+}
 
 </style>

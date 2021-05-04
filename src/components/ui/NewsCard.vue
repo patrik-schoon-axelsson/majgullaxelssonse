@@ -50,4 +50,7 @@ export default {
 .flow-text {
   font-size: 1rem;
 }
+.card-content {
+  overflow-y: scroll;
+}
 </style>

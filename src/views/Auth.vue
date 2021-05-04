@@ -82,6 +82,13 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+
+.z-depth-2 {
+  background-color: #fff;
+  position: 50%;
+  margin-top: 1.6rem;
+  margin-bottom: 16rem;
+}
 
 </style>

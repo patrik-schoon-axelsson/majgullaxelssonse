@@ -1,17 +1,17 @@
 <template>
   <div v-if="loading">
-    <div>
+    <div class="z-depth-2 container">
       <h1 class="center-align"> Laddar nyheter... </h1>
       <div class="progress">
         <div class="indeterminate"></div>
       </div>
     </div>
   </div>
-  <section id="homeBG" v-else>
-    <h3 class="center white-text" id="display-logo">Majgull Axelsson - Författare & Föreläsare</h3>
-    <br>
-    <h6 class="center white-text">Senaste nyheter: </h6>  
-        <div class="carousel">         
+  <section class="container" v-else>
+  <div class="z-depth-2">
+    <h2 class="center flow-text" id="display-logo">Majgull Axelsson - Författare & Föreläsare</h2>
+    <h6 class="center flow-text">Senaste nyheter: </h6>
+      <div class="carousel">         
               <news-card v-for="item in newsArray"
               :url="item.url"
               :category="item.category"
@@ -21,9 +21,10 @@
               :timeStamp="item.timeAdded"
               :author="item.author"
               :id="item.id"
-              @delete-item-by-id="onItemDeletion"></news-card>    
-    </div>
-</section>
+              @delete-item-by-id="onItemDeletion"></news-card>                
+      </div>
+  </div>
+  </section>
 </template>
 
 <script>
@@ -120,26 +121,23 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
 
 .carousel {
+  margin-top: 0px;
   height: 600px;
-  margin-bottom: 2rem;
 }
-#homeBG {
-  z-index: -9999;
-  top: 0;
-  background-attachment: fixed;
-  height: 100%;
-  width: 100%;
-  background-image: url('~@/assets/background-img/samling_bocker.jpeg');
-  background-image: url('~@/assets/background-img/samling_bocker.jpeg'), linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+
 #display-logo {
-  margin-top: 180px;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   font-family: 'Dancing Script', cursive;
 }
 h6 {
   font-size: 1.8rem;
+}
+.z-depth-2 {
+  background-color: #fff;
+  position: 50%;
+  height: 90vh;
+  overflow: scroll;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 </style>
