@@ -9,9 +9,16 @@
   </div>
   <section class="container" v-else>
   <div class="z-depth-2">
-    <h2 class="center flow-text" id="display-logo">Majgull Axelsson - Författare & Föreläsare</h2>
-    <h6 class="center flow-text">Senaste nyheter: </h6>
-      <div class="carousel">         
+    <h2 class="center" id="display-logo">Majgull Axelsson - Författare & Föreläsare</h2>
+    <br>
+    <div class="container">
+    <p class="flow-text">Välkommen till MajgullAxelsson.se. Då Majgull valt att inte sköta sociala medier själv är detta den officiella kontaktsidan för henne
+      och hennes författarskap. Här kan ni se kommande framträdanden, nyheter om Majgull och hennes arbete samt läsa om Majgulls böcker.
+    </p>
+    <br>
+    <h6 class="center">Senaste nyheter: </h6>
+    </div>
+    <div class="carousel">         
               <news-card v-for="item in newsArray"
               :url="item.url"
               :category="item.category"
@@ -22,7 +29,7 @@
               :author="item.author"
               :id="item.id"
               @delete-item-by-id="onItemDeletion"></news-card>                
-      </div>
+    </div>
   </div>
   </section>
 </template>
@@ -122,7 +129,7 @@ export default {
 
 .carousel {
   margin-top: 0px;
-  height: 600px;
+  max-height: 760px;
 }
 
 #display-logo {
@@ -135,9 +142,9 @@ h6 {
 .z-depth-2 {
   background-color: #fff;
   position: 50%;
-  height: 90vh;
-  overflow: scroll;
+  height: 80vh;
   margin-top: 16px;
   margin-bottom: 16px;
+  overflow: scroll;
 }
 </style>

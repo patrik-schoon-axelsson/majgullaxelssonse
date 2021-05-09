@@ -1,5 +1,5 @@
 <template>
-<section class="z-depth-2">
+<section>
   <div id="spinner" v-if="loading"></div>
   <form @submit.prevent="addNewsItem">
     <h5 class="center-align">Lägg till nyhet:</h5>

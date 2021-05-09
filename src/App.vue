@@ -30,6 +30,7 @@ html {
         font-size: 1.6rem;
       }  
       .z-depth-2 {
+        background-color: #fff;
         padding: 1rem;
       }
 }
@@ -44,5 +45,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
+::-webkit-scrollbar {
+  display: none;
+}
 </style>

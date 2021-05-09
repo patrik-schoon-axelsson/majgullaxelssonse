@@ -1,5 +1,5 @@
 <template>
-<section class="z-depth-2">
+<section>
 <div class="row"  v-if="!loadingStatus">
     <div class="col s12 m6">
         <div>

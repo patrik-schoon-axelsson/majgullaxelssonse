@@ -14,8 +14,7 @@
     </div>
 </div>
 <div v-else class="row">
-    <div class="container">
-            <div class="col s12 m6">
+    <div class="col s12 m6">
             <base-book-card
                     :title="this.title"
                     :content="this.content"
@@ -38,8 +37,7 @@
             <p>ISBN: {{ isbn }}</p>
             <br>
             <p>Förlag: {{ publisher }}</p> 
-            </div>
-          </div>
+        </div>
         </div>
     </div>
 </div>

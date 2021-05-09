@@ -1,14 +1,11 @@
 <template>
 <section class="container">
-  <div class="z-depth-2">
+  <div class="z-depth-2 ">
     <div class="row">
       <h1 class="center">Administratörsgränsnitt</h1>
       <br>
       <p class="center">Använd denna sida för att lägga in nya inlägg i nyheterna, nya profiler för böcker eller för nya länkar i "om"-sektionen.</p>
-    </div>
-  </div>
-  <br>
-  <div class="z-depth-2">
+    <br>
     <div class="row">
     <div class="col s12">
       <ul class="tabs">
@@ -19,8 +16,8 @@
     </div>
     </div>
   </div>
-  <br>
     <router-view name="toolbox"></router-view>
+  </div>
 </section>
 </template>
 
@@ -37,7 +34,12 @@ export default {
 
 <style>
 .z-depth-2 {
-  padding: 1rem;
+  background-color: #fff;
+  position: 50%;
+  height: 80vh;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  overflow: scroll;
 }
 
 </style>

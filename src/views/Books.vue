@@ -8,8 +8,6 @@
         :title="book.title"
         :id="book.id"></book-tab-link>
       </ul>
-    </div>
-    <div class="z-depth-2">
       <router-view name="books"></router-view>
    </div>
   </div>
@@ -86,10 +84,16 @@ export default {
 </script>
 
 <style scoped>
-
 .z-depth-2 {
   background-color: #fff;
   position: 50%;
+  height: 80vh;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  overflow: scroll;
 }
 
+ul {
+  margin-bottom: 1rem;
+}
 </style>

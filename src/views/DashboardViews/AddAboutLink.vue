@@ -1,5 +1,5 @@
 <template>
-<section class="z-depth-2" v-if="!isLoading">
+<section v-if="!isLoading">
   <form @submit.prevent="addAboutLinks">
       <h5 class="center-align">Lägg till en ny länk: </h5>
         <div class="row">
