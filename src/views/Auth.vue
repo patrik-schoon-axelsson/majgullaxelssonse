@@ -1,5 +1,5 @@
 <template> 
-<div class="container z-depth-2">
+<div class="container view__wrapper z-depth-2">
     <div class="row">
     <form v-if="!user" @submit.prevent="loginUser">
         <div class="center">
@@ -83,12 +83,5 @@ export default {
 </script>
 
 <style scoped>
-
-.z-depth-2 {
-  background-color: #fff;
-  position: 50%;
-  margin-top: 1.6rem;
-  margin-bottom: 16rem;
-}
 
 </style>

@@ -1,6 +1,6 @@
 <template>
-  <div class="z-depth-2">
-      <div class="container">
+  <div>
+    <div class="container scroll__overflow">
       <h3 class="center">Hej!</h3>
       <p class="text-flow">
        Jag heter Majgull Axelsson och är författare. En gång i världen var jag journalist, men det är mer än 30 år sedan och – oss emellan – var jag aldrig särskilt lysande. Kanske berodde det på att jag valde yrket för att det var något jag trodde att jag skulle kunna bli, i stället för det jag verkligen ville bli, nämligen författare. Men det var lite för stort för att ens drömma om.
@@ -41,13 +41,12 @@ export default {
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,300&display=swap');
 
-.z-depth-2 {
-  background-color: #fff;
-  position: 50%;
-  height: 80vh;
+.scroll__overflow {
   margin-top: 16px;
   margin-bottom: 16px;
   overflow: scroll;
+  position: 50%;
+  height: 80vh;
 }
 
 p {

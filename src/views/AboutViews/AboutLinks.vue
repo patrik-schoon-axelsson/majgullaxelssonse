@@ -1,5 +1,5 @@
 <template>
-  <div class="z-depth-2" v-if="!isLoading">
+  <div v-if="!isLoading">
     <div class="container">
       <strong><h5 class="center">MajgullAxelsson.SE</h5></strong>
       <hr>
@@ -73,10 +73,6 @@ export default {
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
-
-z-depth-2 {
-  background-color: #fff;
-}
 
 h5 {
     font-family: 'Roboto', sans-serif;

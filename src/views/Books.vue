@@ -1,7 +1,7 @@
 <template>
 <div v-if="!isLoading">
   <div class="container">
-    <div class="z-depth-2">
+    <div class="z-depth-2 view__wrapper">
       <ul class="tabs">
         <book-tab-link v-for="book in bookState"
         :key="book.id"
@@ -12,7 +12,7 @@
    </div>
   </div>
 </div>
-<div class="container" v-else>
+<div class="container view__wrapper" v-else>
   <div>
       <h1 class="center-align"> Laddar böcker... </h1>
       <div class="progress">
@@ -84,16 +84,9 @@ export default {
 </script>
 
 <style scoped>
-.z-depth-2 {
-  background-color: #fff;
-  position: 50%;
-  height: 80vh;
-  margin-top: 16px;
-  margin-bottom: 16px;
-  overflow: scroll;
-}
 
 ul {
   margin-bottom: 1rem;
 }
+
 </style>
