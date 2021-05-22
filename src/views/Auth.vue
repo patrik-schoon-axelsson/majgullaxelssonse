@@ -9,7 +9,7 @@
         <div class="row">
             <div class="col s12 m6 input-field">
                 <i class="material-icons prefix">email</i>
-                <input class="validate" placeholder="Email" v-model="email" type="email" name="email" id="email">
+                <input class="validate" placeholder="Email" v-model="email" type="email" name="email" id="email" autofocus>
             </div>
             <div class="col s12 m6 input-field">
                 <i class="material-icons prefix">lock</i>

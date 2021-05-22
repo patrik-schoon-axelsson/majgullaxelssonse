@@ -7,16 +7,16 @@
       </div>
     </div>
   </div>
-  <section class="container" v-else>
-  <div class="z-depth-2 view__wrapper">
+  <section class="container view__wrapper z-depth-2" v-else>
     <h2 class="center" id="display-logo">Majgull Axelsson - Författare & Föreläsare</h2>
     <div class="container">
     <p class="flow-text">Välkommen till MajgullAxelsson.se. Då Majgull valt att inte sköta sociala medier själv är detta den officiella kontaktsidan för henne
       och hennes författarskap. Här kan ni se kommande framträdanden, nyheter om Majgull och hennes arbete samt läsa om Majgulls böcker.
     </p>
   </div>
+  <div class="container">
   <h6 class="center">Senaste nyheter: </h6>
-      <div class="carousel">         
+      <div class="carousel carousel-slider center">         
                 <news-card v-for="item in newsArray"
                 :url="item.url"
                 :category="item.category"
@@ -30,7 +30,10 @@
         </div>
   </div>
   <div class="row">
-    Arkiverade nyheter finns HÄR
+    <h4 class="center">Arkiv</h4>
+    <p class="center">
+      Arkiverade nyheter finns HÄR
+    </p>
   </div>
   </section>
 </template>
@@ -69,7 +72,6 @@ export default {
                 category: doc.data().category,
                 url: doc.data().url
               }
-              console.log(newsItem)
               this.newsArray.push(newsItem);
            });
             this.loading = false;

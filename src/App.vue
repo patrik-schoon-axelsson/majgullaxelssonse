@@ -53,14 +53,15 @@ body {
   background-size: cover;
 }
 .view__wrapper {
+  margin-top: 2rem;
   height: 80vh;
+  max-width: 90vw;
   background-color: #fff;
   position: 50%;
-  margin-top: 1.6rem;
-  margin-bottom: 16rem;
   border-radius: 15px;
   padding: 1.5rem;
   overflow: auto;
+  margin-bottom: 0px;
 }
 
 ::-webkit-scrollbar {

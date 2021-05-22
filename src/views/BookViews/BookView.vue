@@ -13,31 +13,33 @@
         </div>
     </div>
 </div>
-<div v-else class="row">
-    <div class="col s12 m6">
-            <base-book-card
-                    :title="this.title"
-                    :content="this.content"
-                    :quote="this.quote"
-                    :publisher="this.publisher"
-                    :isbn="this.isbn"
-                    :img="this.coverURL"
-                    :id="this.$route.params.id"
-                    @delete-item-by-id="onItemDeletion">
-            </base-book-card>
-        </div>
-        <div class="col s12 m6 hide-on-small-only">
-            <div class="z-depth-2">
-            <h2 class="center">{{title}}</h2>
-            <br>
-            <div class="container">
-            <blockquote>{{ quote }}</blockquote>
-            <br>
-            <p class="flow-text"> {{content}} </p>
-            <p>ISBN: {{ isbn }}</p>
-            <br>
-            <p>Förlag: {{ publisher }}</p> 
-        </div>
+<div class="container" v-else>
+    <div class="row">
+        <div class="col s12 m6">
+                <base-book-card
+                        :title="this.title"
+                        :content="this.content"
+                        :quote="this.quote"
+                        :publisher="this.publisher"
+                        :isbn="this.isbn"
+                        :img="this.coverURL"
+                        :id="this.$route.params.id"
+                        @delete-item-by-id="onItemDeletion">
+                </base-book-card>
+            </div>
+            <div class="col s12 m6 hide-on-small-only">
+                <div class="z-depth-2">
+                <h2 class="center">{{title}}</h2>
+                <br>
+                <div class="container">
+                <blockquote>{{ quote }}</blockquote>
+                <br>
+                <p class="flow-text"> {{content}} </p>
+                <p>ISBN: {{ isbn }}</p>
+                <br>
+                <p>Förlag: {{ publisher }}</p> 
+            </div>
+            </div>
         </div>
     </div>
 </div>

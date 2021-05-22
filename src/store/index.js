@@ -25,10 +25,11 @@ export default createStore({
       context.commit('clearBooks');
       const books = db.collection("books");
   
-      books.get().then((dbBooks) => {
-  
+      books.orderBy('yearOfRelease', 'desc').get()
+      .then((dbBooks) => {
+        
         dbBooks.forEach((book) => {
-  
+        
           const bookItem = {
             id: book.id,
             title: book.data().title,
@@ -36,11 +37,12 @@ export default createStore({
             isbn: book.data().isbn,
             quote: book.data().quote,
             publisher: book.data().publisher,
-            coverURL: book.data().coverURL
+            coverURL: book.data().coverURL,
+            yearOfRelease: parseInt(book.data().yearOfRelease)
           }
+
           context.commit('setBooks', bookItem)
         });
-
       }).catch((error) => {
         console.log(error)
       });

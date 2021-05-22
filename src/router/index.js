@@ -7,10 +7,6 @@ import M from 'materialize-css';
 
 M.AutoInit();
 
-function getUser() {
-  return firebase.auth().currentUser;
-}
-
 const routes = [
   {
     path: '/',
@@ -91,12 +87,12 @@ const router = createRouter({
   routes
 })
 
-router.beforeEach((to, __, next) => {
+router.beforeEach(async (to, __, next) => {
 
 if(to.meta.reqAuth && !store.getters.isLoggedIn){
     next('/auth')
     M.toast({html: `<strong>Du har nekats tillgång till denna del av sidan. Vänligen logga in på nytt! </strong`});
-  } else  next();
+  } else next();
 });
 
 export default router
