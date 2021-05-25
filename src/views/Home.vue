@@ -1,8 +1,8 @@
 <template>
   <div v-if="loading">
-    <div class="z-depth-2 container view__wrapper">
-      <h1 class="center-align"> Laddar nyheter... </h1>
-      <div class="progress">
+    <div class="container">
+      <h1 class="center-align white-text"> Laddar nyheter... </h1>
+      <div class="progress white">
         <div class="indeterminate"></div>
       </div>
     </div>
@@ -29,12 +29,16 @@
                 @delete-item-by-id="onItemDeletion"></news-card>                
         </div>
   </div>
-  <div class="row">
-    <h4 class="center">Arkiv</h4>
-    <p class="center">
-      Arkiverade nyheter finns HÄR
+  <h4 class="center-align"> Nyhetsarkiv</h4>
+  <div class="row" v-if="archiveActive != 'news_archive'">
+    <p class="flow-text center-align">
+      För att se äldre nyheter, tryck på knappen.
     </p>
+    <router-link class="btn center" to="/news">
+      Ladda Nyhetsarkiv
+    </router-link>
   </div>
+  <router-view></router-view>
   </section>
 </template>
 
@@ -53,6 +57,11 @@ export default {
       loading: false,
       newsArray: [],
       }
+  },
+  computed: {
+    archiveActive() {
+      return this.$route.name
+    }
   },
   methods: {
     onItemDeletion(id) {
@@ -123,7 +132,7 @@ export default {
     .catch((error) => {
       console.log(error)
     })
-  }
+  },
 }
 </script>
 

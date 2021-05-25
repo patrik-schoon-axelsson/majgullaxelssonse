@@ -2,7 +2,7 @@
   <li class="tab col"><router-link :to="{ name: 'bookview_details',
     params: {
       id: this.id,
-    }}"> {{ title }} </router-link></li>
+    }}"> {{ title }} ({{ yearOfRelease }})</router-link></li>
 </template>
 
 <script>
@@ -14,7 +14,7 @@ export default {
       
         }
     },
-    props: ['id', 'title'],
+    props: ['id', 'title', 'yearOfRelease'],
     mounted(){
         M.AutoInit();
     },

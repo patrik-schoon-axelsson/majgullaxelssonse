@@ -19,7 +19,7 @@ footer {
     bottom: 0;
     position: fixed;
     width: 100vw;
-    height: 5vh;
+    height: 6vh;
     p{
         margin: 0;
         padding: 0;

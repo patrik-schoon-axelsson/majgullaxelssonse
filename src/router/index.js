@@ -11,7 +11,14 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
+    children: [
+      {
+       path: '/news',
+       name: 'news_archive',
+       component:  () => import('../views/Archive.vue')
+      }
+    ]
   },
   {
     path: '/about',

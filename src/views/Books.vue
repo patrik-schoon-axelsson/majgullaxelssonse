@@ -6,6 +6,7 @@
         <book-tab-link v-for="book in bookState"
         :key="book.id"
         :title="book.title"
+        :yearOfRelease="book.yearOfRelease"
         :id="book.id"></book-tab-link>
       </ul>
       <router-view name="books"></router-view>
