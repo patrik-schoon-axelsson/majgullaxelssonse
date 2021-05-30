@@ -30,7 +30,6 @@ export default {
     emits: ['delete-item-by-id'],
     mounted() {
       M.AutoInit();
-      
     },
     computed: {
       timeStampDate() {
@@ -52,5 +51,8 @@ export default {
 }
 .card-content {
   overflow-y: scroll;
+}
+.carousel-item {
+  margin-bottom: 80px;
 }
 </style>

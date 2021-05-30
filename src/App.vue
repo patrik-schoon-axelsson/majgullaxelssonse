@@ -65,6 +65,15 @@ body {
 }
 
 ::-webkit-scrollbar {
-  display: none;
+  display: block;
+  width: 1px;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.1);
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 15%;
+    background:rgba(0, 0, 0, 0.8);
+    width: 3px;
+    height: 3px;
 }
 </style>

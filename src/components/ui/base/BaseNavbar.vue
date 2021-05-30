@@ -9,8 +9,6 @@
             <li class="tooltipped" data-position="bottom" data-tooltip="Böcker"><router-link to="/books"><i class="material-icons">book</i></router-link></li>
             <li class="tooltipped" data-position="bottom" data-tooltip="Administration" v-if="userLoggedIn">
             <router-link  to="/dashboard"><i class="material-icons">group_add</i></router-link></li>
-            <li class="tooltipped" data-position="bottom" data-tooltip="Konto"><router-link to="/auth">
-            <i v-if="userLoggedIn" class="material-icons">lock_open</i><i v-else class="material-icons">lock_outline</i></router-link></li>
         </ul>
     </div>
   </nav>
@@ -26,7 +24,6 @@
        <li><router-link to="/about"><i class="material-icons">speaker_notes</i> Om Majgull</router-link></li>
        <li><router-link to="/books"><i class="material-icons">book</i> Böcker</router-link></li>
        <li v-if="userLoggedIn"><router-link to="/auth"><i class="material-icons">lock_open</i> Konto</router-link></li>
-       <li v-else><router-link to="/auth"><i class="material-icons">lock_outline</i> Konto</router-link></li>
        <li><router-link v-if="userLoggedIn" to="/dashboard"><i class="material-icons">group_add</i> Administration</router-link></li>
   </ul>
 </template>

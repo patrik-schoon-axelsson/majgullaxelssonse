@@ -64,7 +64,7 @@ export default {
         M.toast({html: `<strong> Dokument med ID ${id} har tagits bort från databasen.`});
 
       }).catch((error) => {
-        console.log(error)
+        console.log(error);
         this.isLoading = false;
       });    
     }
@@ -72,7 +72,7 @@ export default {
   created() {
       this.isLoading = true;
 
-      this.fetchBookData()
+      this.fetchBookData();
 
       this.isLoading = false;
   },

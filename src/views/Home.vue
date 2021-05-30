@@ -14,10 +14,9 @@
       och hennes författarskap. Här kan ni se kommande framträdanden, nyheter om Majgull och hennes arbete samt läsa om Majgulls böcker.
     </p>
   </div>
-  <div class="container">
-  <h6 class="center">Senaste nyheter: </h6>
-      <div class="carousel carousel-slider center">         
-                <news-card v-for="item in newsArray"
+  <h4 class="center">Senaste nyheter: </h4>
+  <div class="carousel">         
+       <news-card v-for="item in newsArray"
                 :url="item.url"
                 :category="item.category"
                 :key="item.id"
@@ -28,15 +27,18 @@
                 :id="item.id"
                 @delete-item-by-id="onItemDeletion"></news-card>                
         </div>
-  </div>
+  <br>
   <h4 class="center-align"> Nyhetsarkiv</h4>
+  <br>
   <div class="row" v-if="archiveActive != 'news_archive'">
-    <p class="flow-text center-align">
+    <div class="center-align">
+    <p class="flow-text">
       För att se äldre nyheter, tryck på knappen.
     </p>
-    <router-link class="btn center" to="/news">
+    <router-link class="btn" to="/news">
       Ladda Nyhetsarkiv
     </router-link>
+  </div>
   </div>
   <router-view></router-view>
   </section>
@@ -44,7 +46,7 @@
 
 <script>
 import NewsCard from './../components/ui/NewsCard.vue';
-import firebase from 'firebase';
+import firebase from 'firebase/app';
 
 let db = firebase.firestore();
 const news = db.collection("news");
@@ -124,9 +126,7 @@ export default {
 
       M.Carousel.init(document.querySelectorAll('.carousel'), {
         numVisible: 6,
-        shift: 25,
-        padding: 15,
-        dist: -50
+        indicators: true,        
       });
     })
     .catch((error) => {
@@ -138,17 +138,11 @@ export default {
 
 <style lang="scss" scoped>
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
-
-.carousel {
-  margin-top: 0px;
-  max-height: 760px;
-}
-
 #display-logo {
   font-size: 3.5rem;
   font-family: 'Dancing Script', cursive;
 }
-h6 {
-  font-size: 1.8rem;
+.carousel {
+  min-height: 560px;
 }
 </style>

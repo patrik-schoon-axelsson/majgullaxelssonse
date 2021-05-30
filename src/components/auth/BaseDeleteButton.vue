@@ -5,7 +5,8 @@
   <teleport to="body">
   <div v-if="userLoggedIn" :id="modalID" class="modal">
     <div class="modal-content">
-      <h4>Delete item with ID {{ id }} ?</h4>
+      <h4>Radera databasobject med ID: {{ id }} ?</h4>
+      <p> Detta går inte att ångra. Om du vill ta bort innehållet, tryck på knappen här under.</p>
     </div>
     <div class="modal-footer">
       <button class="waves-effect waves-light btn red" 
