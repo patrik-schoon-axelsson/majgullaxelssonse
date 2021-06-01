@@ -2,7 +2,7 @@
 <footer class="page-footer">
     <div class="container">
         <p class="center-align">
-            MajgullAxelsson.se tillhör Majgull Axelsson AB. Kontakt för sidan är <a href="mailto:webmaster@majgullaxelsson.se"> webmaster@majgullaxelsson.se</a>.         
+            MajgullAxelsson.se tillhör Majgull Axelsson AB. Sidan är optimerad för webläsare som Safari, Chrome och Edge. Kontakt för sidan är <a href="mailto:webmaster@majgullaxelsson.se"> webmaster@majgullaxelsson.se</a>.         
         </p>
     </div>
 </footer>

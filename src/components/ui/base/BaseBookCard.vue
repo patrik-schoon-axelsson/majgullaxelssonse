@@ -35,12 +35,16 @@
       <blockquote class="flow-text">
         {{ quote }}
       </blockquote>
+        <p class="flow-text"><strong>ISBN-nummer:</strong> {{isbn}}</p>
+        <p class="flow-text"><strong>Förläggare:</strong> {{ publisher}}</p>
     </div>
     <div class="card-reveal">
       <span class="card-title grey-text text-darken-4">{{title}} <i class="material-icons right">close</i></span>
       <p class="flow-text">
         {{ content }}
       </p>
+        <p class="flow-text"><strong>ISBN-nummer:</strong> {{isbn}}</p>
+        <p class="flow-text"><strong>Förläggare:</strong> {{ publisher}}</p>
     </div>
     <div class="card-action">
       <base-delete-button

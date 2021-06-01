@@ -12,11 +12,13 @@
                   <table>
                     <thead>
                       <th>Titel</th>
+                      <th>Innehåll</th>
                       <th>Extern länk</th>
                       <th>Tidpunkt</th>
                     </thead>
                     <tr v-for="doc in archivedNews" :key="doc.id">
-                      <td><archive-modal :id=doc.id :title="doc.title" :content="doc.content"></archive-modal></td>
+                      <td>{{doc.title}}</td>
+                      <td>{{doc.content}}</td>
                       <td><a :href="doc.url" target="_blank">Länk</a></td>
                       <td>{{ doc.time.toLocaleDateString() }}</td>
                     </tr>
@@ -27,9 +29,9 @@
 </template>
 
 <script>
+import M, { Modal } from 'materialize-css';
 import firebase from "firebase/app";
 import ArchiveModal from "../components/ui/ArchiveModal.vue";
-
 
 const db = firebase.firestore();
 

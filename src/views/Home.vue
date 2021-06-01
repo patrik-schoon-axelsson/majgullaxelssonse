@@ -2,8 +2,8 @@
   <div v-if="loading">
     <div class="container">
       <h1 class="center-align white-text"> Laddar nyheter... </h1>
-      <div class="progress white">
-        <div class="indeterminate"></div>
+      <div class="progress">
+        <div class="indeterminate white"></div>
       </div>
     </div>
   </div>

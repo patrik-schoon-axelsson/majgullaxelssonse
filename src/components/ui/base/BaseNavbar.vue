@@ -7,6 +7,7 @@
             <li><router-link  class="tooltipped" data-position="bottom" data-tooltip="Hem" to="/"><i class="material-icons">home</i></router-link></li>
             <li class="tooltipped" data-position="bottom" data-tooltip="Om Majgull"><router-link to="/about"><i class="material-icons">speaker_notes</i></router-link></li>
             <li class="tooltipped" data-position="bottom" data-tooltip="Böcker"><router-link to="/books"><i class="material-icons">book</i></router-link></li>
+                   <li v-if="userLoggedIn"><router-link to="/auth"><i class="material-icons">lock_open</i></router-link></li>
             <li class="tooltipped" data-position="bottom" data-tooltip="Administration" v-if="userLoggedIn">
             <router-link  to="/dashboard"><i class="material-icons">group_add</i></router-link></li>
         </ul>
