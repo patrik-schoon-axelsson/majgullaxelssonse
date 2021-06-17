@@ -9,13 +9,13 @@
   </div>
   <section class="container view__wrapper z-depth-2" v-else>
     <h2 class="center" id="display-logo">Majgull Axelsson - Författare & Föreläsare</h2>
-    <div class="container">
-    <p class="flow-text">Välkommen till MajgullAxelsson.se. Då Majgull valt att inte sköta sociala medier själv är detta den officiella kontaktsidan för henne
+    <div class="row">
+    <p class="flow-text">Välkommen till MajgullAxelsson.se. Detta är den officiella kontaktsidan för henne
       och hennes författarskap. Här kan ni se kommande framträdanden, nyheter om Majgull och hennes arbete samt läsa om Majgulls böcker.
     </p>
   </div>
-  <h4 class="center">Senaste nyheter: </h4>
-  <div class="carousel">         
+  <h4 class="center">Senaste nytt: </h4>
+  <div class="carousel carousel-slider">         
        <news-card v-for="item in newsArray"
                 :url="item.url"
                 :category="item.category"
@@ -125,8 +125,9 @@ export default {
       // Carousel initialization:
 
       M.Carousel.init(document.querySelectorAll('.carousel'), {
-        numVisible: 6,
-        indicators: true,        
+        numVisible: 1,
+        indicators: true,
+        dist: -15        
       });
     })
     .catch((error) => {
@@ -138,11 +139,13 @@ export default {
 
 <style lang="scss" scoped>
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
 #display-logo {
   font-size: 3.5rem;
   font-family: 'Dancing Script', cursive;
 }
 .carousel {
-  min-height: 560px;
+  padding: 0px;
+  min-height: 100%;
 }
 </style>

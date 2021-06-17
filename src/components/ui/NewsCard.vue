@@ -1,6 +1,6 @@
 <template>
 <div class="carousel-item">
-      <div class="card z-depth-2 darken-1 medium">
+      <div class="card large">
         <div class="card-content">
           <span class="card-title"><base-category-button :url="url" :category="category"></base-category-button></span>
           <span class="card-title"><strong class="center">{{ title}}</strong></span>
@@ -53,6 +53,7 @@ export default {
   overflow-y: scroll;
 }
 .carousel-item {
-  margin-bottom: 80px;
+  top: 0px;
+  margin: 0px;
 }
 </style>

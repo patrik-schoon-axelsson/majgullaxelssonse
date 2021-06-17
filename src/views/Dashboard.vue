@@ -13,6 +13,7 @@
           <li class="tab col"><router-link to="/dashboard/add-news">Lägg till nyheter</router-link></li>
           <li class="tab col"><router-link to="/dashboard/add-books">Lägg till böcker</router-link></li>
           <li class="tab col"><router-link to="/dashboard/add-links">Lägg till länkar</router-link></li>
+          <li class="tab col"><router-link to="/dashboard/add-booktip">Lägg till boktips</router-link></li>
         </ul>
       </div>
     </div>

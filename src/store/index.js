@@ -50,7 +50,7 @@ export default createStore({
   },
   getters: {
     isLoggedIn(state) {
-      return state.user;
+      return firebase.auth().currentUser
     },
     getBooks(state) {
       return state.books;
@@ -61,5 +61,6 @@ export default createStore({
     }
   },
   modules: {
+    
   }
 })

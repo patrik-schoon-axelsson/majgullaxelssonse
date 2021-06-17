@@ -30,3 +30,5 @@ firebaseApp.js
 
 *.cache
 /.firebase
+
+worklog.txt

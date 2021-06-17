@@ -1,8 +1,8 @@
 import store from './../store';
 import { createRouter, createWebHashHistory } from 'vue-router';
+import Vue404 from '../views/Vue404.vue';
 import Home from '../views/Home.vue';
 import Books from '../views/Books.vue';
-import firebase from 'firebase';
 import M from 'materialize-css';
 
 M.AutoInit();
@@ -85,7 +85,20 @@ const routes = [
           default: () => import('../views/Dashboard.vue'),
           toolbox: () => import('../views/DashboardViews/AddAboutLink.vue')          
         }
-    }]
+    },
+  {
+    path: 'add-booktip',
+    name: 'add-booktip',
+    components: {
+      default: () => import('../views/Dashboard.vue'),
+      toolbox: () => import('../views/DashboardViews/AddBookTipForm.vue') 
+    }
+  }]
+    },
+    {
+      path: '/:catchAll(.*)',
+      name: '404',
+      component: Vue404
     }
   ]
 

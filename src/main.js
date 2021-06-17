@@ -27,6 +27,7 @@ firebase.auth().onAuthStateChanged(user => {
       email: user.email,
       displayName: user.displayName,
     }
+    
     store.commit('setUser', userStore);    
     
   } else  {
